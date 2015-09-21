@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<meta charset="utf-8" />
+	<title>Simplest Template Engine</title>
+	<style>
+		.content {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+		}
+		.footer {
+			position:absolute;
+			bottom: 0px;
+		}
+	</style>
+	<head>
+		<div>[Header] 现在时间是 <?=date('Y-m-d H:i:s');?></div>
+	</head>
+	<body>
+
+		<?php include($_tpl);?>
+
+		<div class="footer">[Footer] 当前页面加载时间 <?=(microtime() - $data)?></div>
+	</body>
+</html>
